@@ -1,0 +1,26 @@
+<div id="tabla" class="table-bordered">
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Links</th>
+      <th scope="col">Comentario</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each auditoria}}
+        <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{username}}</td>
+        <td>{{fecha}}</td>
+        <td>{{links}}</td>
+        <td>{{comentario}}</td>
+        <td>{{accion}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>

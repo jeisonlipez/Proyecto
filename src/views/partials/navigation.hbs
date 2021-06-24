@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Control de Iluminación LED</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dispositivos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/links">Todos los Dispositivos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/links/add">Agregar otro Dispositivo</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">Perfil de Usuario</a>
+        </li>
+        <li class="nav-item">
+          <a href="/auditoria" class="nav-link">Auditoria</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Cerrar Sesión</a>
+        </li>
+        {{else}}
+          <li class="nav-item">
+            <a href="/signin" class="nav-link">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signup" class="nav-link" >Registarse</a>
+          </li>
+        {{/if}}
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">UTS Ing. Sistemas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
